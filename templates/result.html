@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>Eskimo - HTML Template</title>
+    <!-- META TAGS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- CSS FILES -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ url_for('static', filename='css/fontawesome.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+</head>
+
+<body>
+    <!-- SITE WRAPPER -->
+    <div id="eskimo-site-wrapper">
+        <!-- MAIN CONTAINER -->
+        <main id="eskimo-main-container">
+            <div class="container">
+                <div class="clearfix"></div>
+                <!-- PAGE TITLE -->
+                <!-- PAGE TITLE -->
+                <h1><span>Results, also Excel because we love Excel</span></h1>
+                <p>Pandas, what pandas?</p>
+                <!-- TABS -->
+                <!-- TABS NAVIGATION -->
+                <ul class="nav nav-tabs">
+                    <!-- TAB 1 -->
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#mp-tab-1" aria-expanded="true">
+                            <i class="fa fa-microphone"></i> TAB 1
+                        </a>
+                    </li>
+                    <!-- TAB 2 -->
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#mp-tab-2" aria-expanded="false">
+                            <i class="fa fa-rocket"></i> TAB 2
+                        </a>
+                    </li>
+                    <!-- TAB 3 -->
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#mp-tab-3" aria-expanded="false">
+                            <i class="fa fa-android"></i> TAB 3
+                        </a>
+                    </li>
+                </ul>
+                <!-- TABS CONTENT -->
+                <div class="eskimo-tabs-content tab-content">
+                    <!-- TAB 1 -->
+                    <div class="tab-pane fade active show" id="mp-tab-1" role="button" aria-expanded="true">
+                        <h3>TABS</h3>
+                        <p>Duis instituendarum quamquam illum proident. Te an exercitation eu multos incididunt tempor, nescius in quem te an iis fugiat dolor quid, ne sed voluptatibus hic o ea eruditionem, a cernantur est quibusdam, dolor nostrud consectetur. Doctrina multos eiusmod, ubi possumus in pariatur.</p>
+                        <p>Cernantur cillum tamen cupidatat fore, iis tempor hic commodo et sed irure commodo adipisicing, commodo si amet singulis. Ingeniis dolore in litteris domesticarum hic voluptate quem excepteur tempor. Sed aute admodum expetendis, ubi quae sed noster ita lorem do incurreret, commodo tamen aliquip occaecat se fugiat deserunt. Et multos quamquam ingeniis, nulla vidisse an litteris. Deserunt sed elit, tamen coniunctione officia lorem cupidatat se offendit id duis officia, illum incurreret expetendis.</p>
+                        {{ table_html | safe }}
+                    </div>
+                    <!-- TAB 2 -->
+                    <div class="tab-pane fade " id="mp-tab-2" role="button" aria-expanded="false">
+                        <h3>LOREM IPSUM</h3>
+                        <p>Duis instituendarum quamquam illum proident. Te an exercitation eu multos incididunt tempor, nescius in quem te an iis fugiat dolor quid, ne sed voluptatibus hic o ea eruditionem, a cernantur est quibusdam, dolor nostrud consectetur. Doctrina multos eiusmod, ubi possumus in pariatur.</p>
+                        <p>Cernantur cillum tamen cupidatat fore, iis tempor hic commodo et sed irure commodo adipisicing, commodo si amet singulis. Ingeniis dolore in litteris domesticarum hic voluptate quem excepteur tempor. Sed aute admodum expetendis, ubi quae sed noster ita lorem do incurreret, commodo tamen aliquip occaecat se fugiat deserunt. Et multos quamquam ingeniis, nulla vidisse an litteris. Deserunt sed elit, tamen coniunctione officia lorem cupidatat se offendit id duis officia, illum incurreret expetendis.</p>
+                    </div>
+                    <!-- TAB 3 -->
+                    <div class="tab-pane fade " id="mp-tab-3" role="button" aria-expanded="false">
+                        <h3>COMMODO AUTE</h3>
+                        <p>Duis instituendarum quamquam illum proident. Te an exercitation eu multos incididunt tempor, nescius in quem te an iis fugiat dolor quid, ne sed voluptatibus hic o ea eruditionem, a cernantur est quibusdam, dolor nostrud consectetur. Doctrina multos eiusmod, ubi possumus in pariatur.</p>
+                        <p>Cernantur cillum tamen cupidatat fore, iis tempor hic commodo et sed irure commodo adipisicing, commodo si amet singulis. Ingeniis dolore in litteris domesticarum hic voluptate quem excepteur tempor. Sed aute admodum expetendis, ubi quae sed noster ita lorem do incurreret, commodo tamen aliquip occaecat se fugiat deserunt. Et multos quamquam ingeniis, nulla vidisse an litteris. Deserunt sed elit, tamen coniunctione officia lorem cupidatat se offendit id duis officia, illum incurreret expetendis.</p>
+                    </div>
+                </div>
+                <!-- DIVIDER -->
+                <hr />
+                <!-- LARGE BUTTONS -->
+                <p>
+                    <a href="#" class="btn btn-default btn-lg">Download</a>
+                </p>
+            </div>
+        </main>
+    </div>
+    <!-- JS FILES -->
+    <script type="text/javascript" charset="utf8" src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+    <script src="{{ url_for('static', filename='js/result.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/panel.js') }}"></script>
+</body>
+</html>
