@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>Eskimo - HTML Template</title>
+    <!-- META TAGS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- CSS FILES -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ url_for('static', filename='css/fontawesome.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!-- SITE WRAPPER -->
+    <div id="eskimo-site-wrapper">
+        <!-- MAIN CONTAINER -->
+        <main id="eskimo-main-container">
+            <div class="container">
+                <div class="clearfix"></div>
+                <!-- PAGE TITLE -->
+                <h1><span>When your company uses a data warehouse that only outputs Excel</span></h1>
+                <p>Input your Excel files here, you poor youngin who cannot do SQL queries.</p>
+                <!-- ACCORDION -->
+                <form method="post" enctype=multipart/form-data>
+                    <div id="mp-accordion-1" data-children=".mp-accordion-item" class="mp-accordion">
+                        <!-- ACCORDION ITEM 1 -->
+                        <div class="mp-accordion-item">
+                            <a class="mp-accordion-title " data-toggle="collapse" data-parent="#mp-accordion-1" href="#mp-accordion-item-1" aria-expanded="false" aria-controls="mp-accordion-item-1">
+                                Steam Data
+                            </a>
+                            <div id="mp-accordion-item-1" class="collapse show" role="tabpanel">
+                                <div class="mp-accordion-content">
+                                    <p>Sample Steam data from Kaggle.com. I'm only using it as sample data to render. Please make sure 
+                                        that the table matches the headings and row positions, and there are no other sheets in the workbook.
+                                    </p>
+                                    <div class="input-group">
+                                        <input type="file" class="form-control" name="file1" placeholder="Your cute excel worksheet here" required=True>
+                                    </div>
+                                    <br>
+                                    <img class="img" src="{{ url_for('static', filename='images/900x600.png') }}" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ACCORDION ITEM 2 -->
+                        <div class="mp-accordion-item">
+                            <a class="mp-accordion-title collapsed" data-toggle="collapse" data-parent="#mp-accordion-1" href="#mp-accordion-item-2" aria-expanded="false" aria-controls="mp-accordion-item-2">
+                                Epic Data
+                            </a>
+                            <div id="mp-accordion-item-2" class="collapse" role="tabpanel">
+                                <div class="mp-accordion-content">
+                                    <p>Some placeholder text</p>
+                                    <div class="input-group">
+                                        <input type="file" class="form-control" name="file2" placeholder="Your cute excel worksheet here" required=True>
+                                    </div>
+                                    <br>
+                                    <img class="img" src="{{ url_for('static', filename='images/900x600.png') }}" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ACCORDION ITEM 3 -->
+                        <div class="mp-accordion-item">
+                            <a class="mp-accordion-title collapsed" data-toggle="collapse" data-parent="#mp-accordion-1" href="#mp-accordion-item-3" aria-expanded="false" aria-controls="mp-accordion-item-3">
+                                Origin Data
+                            </a>
+                            <div id="mp-accordion-item-3" class="collapse" role="tabpanel">
+                                <div class="mp-accordion-content">
+                                    <p>Duis instituendarum quamquam illum proident. Te an exercitation eu multos incididunt tempor, nescius in quem te an iis fugiat dolor quid, ne sed voluptatibus hic o ea eruditionem, a cernantur est quibusdam, dolor nostrud consectetur. Doctrina multos eiusmod, ubi possumus in pariatur.</p>
+                                    <div class="input-group">
+                                        <input type="file" class="form-control" name="file3" placeholder="Your cute excel worksheet here" required=True>
+                                    </div>
+                                    <br>
+                                    <img class="img" src="{{ url_for('static', filename='images/900x600.png') }}" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <br>
+                <!-- LARGE BUTTONS -->
+                <p>
+                    <input type="submit" value="Process Files" class="btn btn-default btn-lg">
+                </p>
+                </form>
+            </div>
+        </main>
+    </div>
+    <!-- JS FILES -->
+    <script src="{{ url_for('static', filename='js/jquery-3.5.1.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/panel.js') }}"></script>
+</body>
+
+</html>
